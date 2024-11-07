@@ -117,7 +117,13 @@ function onClickSetter() {
 yArea.addEventListener('select', () => {
     let url = ''
 
+    if (block4.querySelector('#picture')) {
+        window.alert("Форма вже існує");
+        return;
+    }
+
     const formDiv = document.createElement('div')
+    formDiv.setAttribute('id', 'picture')
     formDiv.className = 'container'
 
     const newForm = document.createElement('form')

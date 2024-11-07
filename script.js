@@ -115,6 +115,18 @@ function onClickSetter() {
 }
 
 yArea.addEventListener('select', () => {
+    const audio = document.createElement('audio');
+    audio.setAttribute('controls', '');
+    audio.setAttribute('autoplay', '');
+
+    const audioLine = document.createElement('source');
+    audioLine.src = 'assets/Maroon5_Memories.mp3';
+    audioLine.type = 'audio/mpeg';
+
+    audio.appendChild(audioLine);
+
+    block4.appendChild(audio);
+
     let url = ''
 
     if (block4.querySelector('#picture')) {
